@@ -1,0 +1,7 @@
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (1, 'Alexio', '$2y$10$Dh8zzBJpHyN9g5gYAJuodOapXf4CLpffAuXftL0P63ET5z/MhH6KO', 'info@vaydesign.com', '2019-07-07 13:28:43', '2019-07-07 13:28:43', '1b0nVJmMD8UP9PbZVE8Xtu9ZUgda9nsY7VpH8OWeo7J57RKKpUB8qR5F9lsb');
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (2, 'Peter', '1234', 'info@va3ydesign.com', '2019-07-04 12:46:13', '2019-07-04 12:46:13', null);
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (3, 'Martin', '1234', 'asdasdads@adad.de', '2019-07-07 15:56:51', '2019-07-07 15:56:54', null);
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (4, 'Sandra', '1234
+', 'adas@adad.de', '2019-07-07 15:56:02', '2019-07-07 15:56:05', '');
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (5, 'Gregor', '1234', 'asdkasdla@add.de', '2019-07-07 16:35:54', '2019-07-07 16:35:57', null);
+INSERT INTO studydrive.users (id, name, password, email, created_at, updated_at, remember_token) VALUES (6, 'Justin', '1234', 'asdklasda@dde.de', '2019-07-07 16:36:15', '2019-07-07 16:36:18', null);
