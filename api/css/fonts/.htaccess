@@ -1,0 +1,11 @@
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Credentials true
+Header add Access-Control-Allow-Headers "authorization, origin, user-token, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+  <IfModule mod_headers.c>
+    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
