@@ -1,0 +1,83 @@
+header {
+  position: relative;
+  background: linear-gradient(#9D5FBA, #8A63BA);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: left;
+  color: #fff;
+}
+header a {
+  color: #fff;
+  font-size: 1.1em;
+}
+header h2 {
+  text-shadow: 1px 1px 0 #533670;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.3em;
+  display: inline-block;
+}
+header .line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 630px;
+  top: 90px;
+  background-image: linear-gradient(to right, #9860ba 0%, #fff 100%);
+}
+header .user {
+  float: right;
+  font-size: 0.9em;
+}
+header .search {
+  margin-top: 50px;
+  display: block;
+  font-size: 0.9em;
+}
+header .search div {
+  display: inline-block;
+  width: 350px;
+}
+header .search div:first-child {
+  margin-right: 15px;
+}
+header .search input {
+  width: 100%;
+  background-color: #E8E0F1;
+  margin: 0;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+  color: #6e4f92;
+}
+header .search input:focus {
+  outline: none;
+}
+header .search p {
+  font-size: 0.9em;
+}
+header .search .btn {
+  border: 1px solid #fff;
+  background: none;
+  margin: -3px 0 0 9px;
+  padding: 12px 15px;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  border-radius: 8px;
+}
+header .search .btn:focus, header .search .btn:active {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+header .search .btn .btn-info.focus, header .search .btn .btn-info:focus, header .search .btn .btn-info:not(:disabled):not(.disabled):active:focus, header .search .btn .btn-info:not(:disabled):not(.disabled):active {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+

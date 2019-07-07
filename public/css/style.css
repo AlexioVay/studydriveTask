@@ -1,0 +1,19 @@
+/* * *   Layout    * * */
+.container .title {
+    margin: 40px 0;
+    text-align: center;
+}
+.container .suggestions {
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+.container .suggestions div {
+    margin-top: 5px;
+}
+.container .suggestions-options {
+    font-size: 0.9em;
+    float: right;
+    padding-top: 30px;
+}
+
+

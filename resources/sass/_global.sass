@@ -1,0 +1,245 @@
+@charset "utf-8"
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700)
+@font-face
+  font-family: "Google Sans"
+  src: url(/studydrive/public/fonts/GoogleSans-Medium.ttf)
+
+// Colors
+$grey: #999
+$grey-light: lighten($grey, 15)
+$blue: #1a75bb
+$blue-light: lighten($blue, 15)
+$purple: #7F33C5
+$purple-light: lighten($purple, 15)
+$green: #8DB31F
+$green-light: lighten($green, 15)
+$amaranth: #ff7878
+$amaranth-light: lighten($amaranth, 15)
+$facebook: #4467ae
+$facebook-light: lighten($facebook, 15)
+.purple
+  color: $purple
+.green
+  color: $green
+.amaranth
+  color: $amaranth
+
+// Typography
+=googlesans($size)
+  font-family: "Google Sans", "Roboto", Arial, sans-serif
+  font-size: $size
+  font-weight: 500
+
+$font-family: "Google Sans", "Roboto", Arial, sans-serif
+$font-size: 1.0em
+$line-height: 1.6
+
+// HTML Tags  
+html, body
+  overflow-x: hidden
+  font-family: "Roboto", sans-serif
+  font-size: 1.0em
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  color: #333
+  margin: 0
+strong
+  color: #555
+a, a.passive:hover 
+  font-family: $font-family
+  font-weight: 500
+  letter-spacing: 0.5px
+  text-decoration: none
+a:hover
+  color: #666
+  text-decoration: none
+a.passive
+  color: #999
+h1, h2, h3
+  font-family: "Google Sans", sans-serif
+h2
+  font-size: 1.1em
+  color: #666
+  & + ul
+    margin-top: 15px
+h3
+  font-size: 1.1em
+  color: #666
+  font-weight: 500
+
+%hrgt
+  border: none
+  height: 15px
+  background-image: linear-gradient(rgba(255, 255, 255, .5), #eee)
+%hrgb
+  border: none
+  height: 15px
+  background-image: linear-gradient(rgba(255, 255, 255, .5), #eee)
+
+hr
+  margin: 0
+  &.gt
+    @extend %hrgt
+  &.gb
+    @extend %hrgb
+
+ul
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+    margin-bottom: 7px
+    .material-icons
+      color: $green
+      font-size: 21px
+      margin-right: 8px
+  & + .btn
+    margin-top: 10px
+    margin-bottom: 35px
+
+p
+  font-size: .9em
+  line-height: 1.8em
+
+main
+  padding: 30px 0
+  h2
+    color: #555
+    @extend .text-shadow
+
+  .cta
+    h2
+      color: $green
+
+  .material-icons
+    font-size: 21px
+    margin-right: 7px
+    & + h2
+      display: inline-block
+
+  .grey
+    background-image: linear-gradient(#ececec, #fff)
+    hr
+      height: 30px
+      @extend %hrgt
+    img
+      float: left
+      margin: 3px 29px 0 0
+
+footer
+  border-top: 1px solid #eee
+  padding: 25px 0
+  font-size: 0.9em
+  .nav
+    margin-top: 10px
+  .address
+    color: $grey
+    font-size: 0.8em
+    letter-spacing: 0.05em
+    margin-top: 15px
+
+
+// Helper Classes
+.text-gradient-purple
+  display: inline-block
+  background-image: linear-gradient(to right, #8b63ba 0%, #6fd6ba 100%)
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+.text-shadow
+  text-shadow: 1px 1px 0 #fff
+.material-icons + h3
+  display: inline-block
+  margin-left: 10px
+
+
+
+// - - - Bootstrap - - -
+.btn
+  +googlesans(1.05em)
+  padding: 7px 16px
+  &:active, &:focus
+    box-shadow: none
+// Generate .btn-{$color}
+$button_colors: (purple: $purple, green: #a6cd58, amaranth: $amaranth, facebook: $facebook)
+@each $name, $hex in $button_colors
+  .btn-#{$name}
+    color: #fff
+    background-color: #{$hex}
+// Generate .btn-{$color}:hover
+$button_hover: (hover: 15%)
+@each $name, $hex in $button_colors
+  @each $n, $v in $button_hover
+    .btn-#{$name}:#{$n}
+      color: #fff
+      background-color: darken($hex, $v)
+
+
+
+// Animations
+@-webkit-keyframes fadein
+  from
+    opacity: 0
+  to
+    opacity: 1
+@-webkit-keyframes fadeout
+  from
+    opacity: 1
+  to
+    opacity: 0
+.in, .out
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-duration: 705ms
+  -moz-animation-timing-function: ease-in-out
+  -moz-animation-duration: 705ms
+.faded.out
+  -webkit-animation-name: fadeout
+  -moz-animation-name: fadeout
+  opacity: 0
+.faded.in
+  opacity: 1
+  -webkit-animation-name: fadein
+  -moz-animation-name: fadein
+
+// Scrollbar
+::-webkit-scrollbar-track
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0.5)
+  background-color: #F5F5F5
+::-webkit-scrollbar
+  height: 7px
+  width: 7px
+  background-color: rgba(0,0,0,0.5)
+::-webkit-scrollbar-thumb
+  background-color: rgba(0,0,0,0.1)
+
+// Input Placeholder
+%placeholder
+  color: #ccc !important
+  opacity: 1
+::placeholder
+  @extend %placeholder
+::-ms-input-placeholder
+  @extend %placeholder
+::-moz-placeholder
+  @extend %placeholder
+::-webkit-input-placeholder
+  @extend %placeholder
+
+// Material Icons
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 21px
+  display: inline-flex
+  vertical-align: sub
+  line-height: 1.1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  font-feature-settings: 'liga'

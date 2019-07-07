@@ -1,0 +1,62 @@
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  input[type=radio] + label > span, input[type=checkbox] + label > span {
+    margin-top: 4px;
+  }
+
+  @keyframes checkbox-check {
+    0% {
+      width: 0;
+      height: 0;
+      border-color: #fff;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    33% {
+      width: 2px;
+      height: 2px;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    100% {
+      width: 3px;
+      height: 6px;
+      border-color: #fff;
+      transform: translate3d(0, -0.4em, 0) rotate(45deg);
+    }
+  }
+}
+@media (max-width: 991px) {
+  /* Checkbox + Radio */
+  input[type=radio]:checked + label > span:before, input[type=checkbox]:checked + label > span:before {
+    top: 0.45em;
+    left: 0.1em;
+  }
+
+  input[type=radio] + label > span, input[type=checkbox] + label > span {
+    margin-top: 0;
+  }
+
+  p.f09 input[type=checkbox] {
+    margin-top: 3px;
+  }
+
+  /* Animations */
+  @-webkit-keyframes run-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  @-webkit-keyframes run-left {
+    from {
+      right: 0;
+    }
+    to {
+      right: 50%;
+    }
+  }
+}
+/* landscape phones and down */
+
+/*# sourceMappingURL=mqueries.css.map */
