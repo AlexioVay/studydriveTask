@@ -3,7 +3,7 @@
 This is a repository that presents my solution to the following task:
 https://github.com/AlexioVay/studydrive/blob/master/public/Task.pdf
 
-I have set up the MySQL tables manually without Laraval schemes. Therefore this step is required:
+I have set up the MySQL tables manually without Laravel schemes or migration. Therefore this step is required:
 
 1. Create MySQL database tables:
 
