@@ -1,6 +1,6 @@
 # Laravel + VueJS Job Application Task (Studydrive GmbH)
 
-I received [this Studydrive task](https://github.com/AlexioVay/studydrive/blob/master/public/Task.pdf). This is a repository that represents my solution.
+I have received [this Studydrive task](https://github.com/AlexioVay/studydrive/blob/master/public/Task.pdf). This is a repository that represents my solution.
 
 I have set up the MySQL tables manually without Laravel schemes or migration. Therefore this step is required:
 
